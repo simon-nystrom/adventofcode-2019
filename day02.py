@@ -25,8 +25,8 @@ def part1(puzzle_input, arg1, arg2):
 
 @printed
 def part2(puzzle_input):
-    for i in range(99):
-        for j in range(99):
+    for i in range(100):
+        for j in range(100):
             if solve(puzzle_input, i, j) == 19690720:
                 return 100 * i + j
             
