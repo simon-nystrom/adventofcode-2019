@@ -1,4 +1,5 @@
 from utils.timing import timing
+from functools import reduce
 
 file = open("day01.txt")
 puzzle_input = [int(x) for x in file.read().split('\n')]
