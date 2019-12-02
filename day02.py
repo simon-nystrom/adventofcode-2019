@@ -1,4 +1,4 @@
-from utils.timing import timing
+from utils.printing import printed
 
 file = open("day02.txt")
 puzzle_input = [int(x) for x in file.read().split(',')]
@@ -19,11 +19,11 @@ def solve(puzzle_input, arg1, arg2):
             else:
                 return data[0]
 
-@timing
+@printed
 def part1(puzzle_input, arg1, arg2):
     return solve(puzzle_input, arg1, arg2)
 
-@timing
+@printed
 def part2(puzzle_input):
     for i in range(99):
         for j in range(99):

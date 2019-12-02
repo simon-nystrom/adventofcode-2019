@@ -1,4 +1,4 @@
-from utils.timing import timing
+from utils.printing import printed
 from functools import reduce
 
 file = open("day01.txt")
@@ -14,11 +14,11 @@ def calculate_fuel2(mass, current_fuel = 0):
         return current_fuel
     return calculate_fuel2(req_fuel, current_fuel + req_fuel)
 
-@timing
+@printed
 def part1(puzzle_input):
     return reduce(lambda prev, mass: prev + calculate_fuel(mass), puzzle_input, 0)
 
-@timing
+@printed
 def part2(puzzle_input):
     return reduce(lambda prev, mass: prev + calculate_fuel2(mass), puzzle_input, 0)
 

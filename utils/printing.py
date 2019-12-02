@@ -1,6 +1,6 @@
 import time
 
-def timing(f):
+def printed(f):
     def wrap(*args):
         time1 = time.time()
         ret = f(*args)
